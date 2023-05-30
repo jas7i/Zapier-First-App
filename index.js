@@ -22,7 +22,6 @@ module.exports = {
 
   // If you want your searches to show up, you better include it here!
   searches: {},
-
   // If you want your creates to show up, you better include it here!
   creates: {},
 
