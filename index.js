@@ -2,22 +2,21 @@ const {
   config: authentication,
   befores = [],
   afters = [],
-} = require('./authentication');
+} = require("./authentication");
 
 const contactResource = require("./resources\\contact");
 
 module.exports = {
   // This is just shorthand to reference the installed dependencies you have.
   // Zapier will need to know these before we can upload.
-  version: require('./package.json').version,
-  platformVersion: require('zapier-platform-core').version,
+  version: require("./package.json").version,
+  platformVersion: require("zapier-platform-core").version,
 
   authentication,
 
   beforeRequest: [...befores],
 
   afterResponse: [...afters],
-
   // If you want your trigger to show up, you better include it here!
   triggers: {},
 
@@ -28,6 +27,6 @@ module.exports = {
   creates: {},
 
   resources: {
-    [contactResource.key]: contactResource
+    [contactResource.key]: contactResource,
   },
 };
